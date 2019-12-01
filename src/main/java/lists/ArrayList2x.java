@@ -87,4 +87,12 @@ public class ArrayList2x<T> implements IList<T> {
         size--;
 
     }
+    @Override
+    public void swap(int index1, int index2) {
+        checkInsertBounds(index1);
+        checkInsertBounds(index2);
+        T tmp = array[index1];
+        array[index1] = array[index2];
+        array[index2]=tmp;
+    }
 }
